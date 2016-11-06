@@ -49,3 +49,11 @@ Features
 2.  Service Discovery:
 
 Modify the Application class. Add @EnableDiscoveryClient.
+
+3.  Circuit Breaker:
+
+4.	Feign:
+
+5.  Ribbon:
+
+6.  Zuul:
