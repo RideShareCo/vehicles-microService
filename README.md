@@ -16,9 +16,10 @@ Features
 * Router and Filter: automatic registration of Zuul filters, and a simple convention over configuration approach to reverse proxy creation
 
 
-**Setting up micro service:**
+### Setting up micro service:
 
-1.  External Configuration:
+**Step 0.  External Configuration:**
+- Add the org.springframework.cloud management dependency in pom.xml.
 
  ```
 	<dependencyManagement>
@@ -34,6 +35,10 @@ Features
 	</dependencyManagement>
 ```
 
+**Step 1.  External Configuration:**
+- Add the org.springframework.cloud (Step 0)
+- Add spring-cloud-starter-config dependency.
+
  ```
 	<dependencies>
 		<dependency>
@@ -46,14 +51,29 @@ Features
 	</dependencies>
 ```
 
-2.  Service Discovery:
+**Step 2.  Service Discovery:**
 
-Modify the Application class. Add @EnableDiscoveryClient.
+- Modify the Application class. Add @EnableDiscoveryClient.
 
-3.  Circuit Breaker:
+**Step 3.  (Optionaly) Ribbon:**
+- Add the org.springframework.cloud (Step 0)
+- Add spring-cloud-starter-ribbon dependency.
+ ```
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbbon</artifactId>
+		</dependency>
 
-4.	Feign:
+		...
 
-5.  Ribbon:
+	</dependencies>
+```
 
-6.  Zuul:
+**Step 4.  Circuit Breaker:**
+
+
+**Step 5.	Feign:**
+
+
+**Step 6.  Zuul:**
