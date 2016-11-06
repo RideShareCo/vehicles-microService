@@ -16,3 +16,36 @@ Features
 * Router and Filter: automatic registration of Zuul filters, and a simple convention over configuration approach to reverse proxy creation
 
 
+**Setting up micro service:**
+
+1.  External Configuration:
+
+ ```
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+            	<artifactId>spring-cloud-starter-parent</artifactId>
+				<version>Camden.BUILD-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+```
+
+ ```
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+		...
+
+	</dependencies>
+```
+
+2.  Service Discovery:
+
+Modify the Application class. Add @EnableDiscoveryClient.
